@@ -1,2 +1,25 @@
-<h1>StaticHome#book</h1>
-<p>Find me in app/views/static_home/book.html.erb</p>
+<h1>Book Section</h1>
+<table>
+<tr>
+    <th>Id</th>
+    <th>Book Name</th>
+    <th>Book Author</th>
+    <th>Description</th>
+    <th>Assign</th>
+    <th>Edit</th>
+    <th>Remove</th>
+</tr>
+
+  <% @books.each do |book| %>
+    <tr>
+    <td><%=book.id%></td>
+    <td><%=book.book_name%></td>
+    <td><%=book.author_name%></td>
+    <td><%=book.description%></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+  <% end %>
+
+</table>
