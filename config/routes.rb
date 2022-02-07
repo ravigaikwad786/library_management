@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  
   get 'static_home/book'
   get 'static_home/student'
   root 'static_home#home'
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   get 'application/hello'
 
   resources :books
-
+  
+  resources :students
 
 end

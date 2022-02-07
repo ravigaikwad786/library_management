@@ -13,3 +13,13 @@
         description: Faker::Book.genre
     )
 end
+
+10.times do
+    Student.create(
+      roll_no: rand(100),
+      name: Faker::Name.first_name,
+      last_name: Faker::Name.last_name,
+      address: Faker::Address.city,
+      
+    )
+end

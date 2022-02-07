@@ -1,7 +1,11 @@
 <h3>Update Book Details</h3>
 <%= form_with model: @book do |form| %>
+  <%=form.label :book_name , 'Book Name'%>
   <%= form.text_field :book_name, placeholder: "book name" %>
+  <%=form.label :Author_name , 'Author Name'%>
   <%= form.text_field :author_name, placeholder: "author name" %>
-  <%= form.text_field :description, placeholder: "description"%>
+  <%=form.label :description , 'Description'%>
+  <%= form.text_area :description, placeholder: "description" ,size:'50*20'%>
   <%= form.submit %>
 <% end %>
+

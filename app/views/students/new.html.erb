@@ -1,0 +1,15 @@
+<h3>Register Student</h3>
+
+
+<%= form_with model: @student do |form| %>
+  <%=form.label :roll_no , 'Roll no'%>
+  <%= form.text_field :roll_no, placeholder: "Enter Roll No" %>
+  <%=form.label :first_name , 'First Name'%>
+  <%= form.text_field :name, placeholder: "Enter First Name" %>
+  <%=form.label :last_name , 'Last Name'%>
+  <%= form.text_field :last_name, placeholder: "Enter Last Name" %>
+  <%=form.label :address , 'Address'%>
+  <%= form.text_field :address, placeholder: "Enter Address" %>
+ 
+  <%= form.submit %>
+<% end %>

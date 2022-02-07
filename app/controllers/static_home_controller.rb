@@ -6,5 +6,6 @@ class StaticHomeController < ApplicationController
  
 
   def student
+    @student = Student.all
   end
 end
