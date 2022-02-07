@@ -3,6 +3,8 @@ class StaticHomeController < ApplicationController
     @books = Book.all
   end
 
+ 
+
   def student
   end
 end

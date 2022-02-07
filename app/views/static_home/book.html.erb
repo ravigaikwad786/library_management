@@ -1,4 +1,4 @@
-<h1>Book Section</h1>
+<h1>Book Section</h1><%=link_to "Add_new_book" , new_book_path%><br><br>
 <table>
 <tr>
     <th>Id</th>
@@ -6,6 +6,7 @@
     <th>Book Author</th>
     <th>Description</th>
     <th>Assign</th>
+    <th>View</td>
     <th>Edit</th>
     <th>Remove</th>
 </tr>
@@ -17,8 +18,9 @@
     <td><%=book.author_name%></td>
     <td><%=book.description%></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td><%= link_to "view", book_path(book)%></td>
+    <td><%= link_to "edit", edit_book_path(book)%></td>
+    <td><%= link_to "delete", book_path(book) ,method: :'delete' , data:{confirm:'Are you sure?'} %></td>
     </tr>
   <% end %>
 

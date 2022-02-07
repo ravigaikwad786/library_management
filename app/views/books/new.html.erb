@@ -1,2 +1,7 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<h3>Insert New Book</h3>
+<%= form_with model: @book do |form| %>
+  <%= form.text_field :book_name, placeholder: "name" %>
+  <%= form.text_field :author_name, placeholder: "author name" %>
+  <%= form.text_field :description, placeholder: "description" %>
+  <%= form.submit %>
+<% end %>
