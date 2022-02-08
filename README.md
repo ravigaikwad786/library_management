@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# working on modal and book assigning functinality
 
-Things you may want to cover:
+steps to install application at local machine
 
-* Ruby version
+# use ruby version 3.0.0
+#$ rvm use 3.0.2
+# install Bundle
+#$ bundle install
+# Configure the database.yml by file
+--> note i have use mysql database 
+--> Change 
+    username: 
+    password:
+# Run Following Command
+#$ rails db:create
+#$ rails db:migrate
+#$ rails db:seed (for write into database)    
+# Running The aseets precompile
+#$ rails assets:precompile
 
-* System dependencies
+# Starting the application
+#$ rails s
 
-* Configuration
+# Application is live  but data-base not sysnced
+link->
+https://library-management012.herokuapp.com/
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+heroku log trace:
+ but Showing 2022-02-08T06:23:09.296838+00:00 app[web.1]: [6d00cedd-bb1b-4118-8a4a-574ffcd098a6] ActionView::Template::Error (ERROR:  invalid value for parameter "client_encoding": "utf8mb4"
