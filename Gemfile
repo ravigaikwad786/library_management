@@ -26,6 +26,8 @@ gem 'bootstrap-sass'
 # gem 'image_processing', '~> 1.2'
 gem 'faker'
 # Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap'
+
 
 
 group :development, :test do
