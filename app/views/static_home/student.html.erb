@@ -16,7 +16,12 @@
     <td><%=s.name%></td>
     <td><%=s.last_name%></td>
     <td><%=s.address%></td>
-    <td><%=s.book_id%></td>
+    <td>
+      <%if s.book_id?%>
+        <%b=@book.find(s.book_id)%>
+          <font color="red"><%=b.book_name%></font>
+        <%end%> 
+    </td>
     
     <td><%= link_to "view", student_path(s)%></td>
     
