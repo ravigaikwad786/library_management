@@ -6,6 +6,9 @@ steps to install application at local machine
 
 # use ruby version 3.0.1
 #$ rvm use 3.0.2
+
+#use any node version less than node v 15
+
 # install Bundle
 #$ bundle install
 # Configure the database.yml by file

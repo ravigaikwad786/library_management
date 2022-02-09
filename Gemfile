@@ -28,6 +28,7 @@ gem 'faker'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap'
 
+gem 'pry'
 
 
 group :development, :test do

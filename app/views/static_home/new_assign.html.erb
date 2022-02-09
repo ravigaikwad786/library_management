@@ -1,0 +1,23 @@
+<h1>Assign <%=@book.book_name%> To Student</h1>
+
+<table>
+<tr>
+    <th>Roll no</th>
+    <th>First Name</th>
+    <th>Address</th>
+    <th>confirm</th>
+    
+</tr>
+
+  <% @student.each do |s| %>
+    <tr>
+    <td><%=s.roll_no%></td>
+    <td><%=s.name%></td>
+    <td><%=s.address%></td>
+    <% @userid=[s.id,@book.id]%>
+    <td><%= link_to "assign", static_home_assignbook_path(:all_id => @userid.to_s)%></td>
+    
+    </tr>
+  <% end %>
+
+</table>

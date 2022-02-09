@@ -1,7 +1,8 @@
-<h1>Book Section</h1><%=link_to "Add_new_book" , new_book_path%><br><br>
+<h1>Book Section</h1>
+<%=link_to "Add_new_book" , new_book_path%><br>
+<br>
 <table>
-
-<tr>
+  <tr>
     <th>Id</th>
     <th>Book Name</th>
     <th>Book Author</th>
@@ -10,23 +11,23 @@
     <th>View</td>
     <th>Edit</th>
     <th>Remove</th>
-</tr>
-
-  <% @books.each do |book| %>
+  </tr>
+  <%@books.each do |book|%>
     <tr>
-    <td><%=book.id%></td>
-    <td><%=book.book_name%></td>
-    <td><%=book.author_name%></td>
-    <td><%=book.description%></td>
-    <td>
-     <button id="myBtn">Assign Book</button>
-    
-    </td>
-    <td><%= link_to "view", book_path(book)%></td>
-    <td><%= link_to "edit", edit_book_path(book)%></td>
-    <td><%= link_to "delete", book_path(book) ,method: :'delete' , data:{confirm:'Are you sure?'} %></td>
+      <td><%=book.id%></td>
+      <td><%=book.book_name%></td>
+      <td><%=book.author_name%></td>
+      <td><%=book.description%></td>
+      <td>
+        <%if book.student_id?%>
+          <%=book.student_id%>
+        <%else%>
+          <%=link_to "Assign Book" , static_home_assign_path(id: book.id ) %> 
+        <%end%> 
+      </td>
+      <td><%= link_to "view", book_path(book)%></td>
+      <td><%= link_to "edit", edit_book_path(book)%></td>
+      <td><%= link_to "delete", book_path(book) ,method: :'delete' , data:{confirm:'Are you sure?'} %></td>
     </tr>
-  <% end %>
-
+  <%end%>
 </table>
-

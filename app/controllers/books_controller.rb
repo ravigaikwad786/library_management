@@ -29,6 +29,11 @@ class BooksController < ApplicationController
     redirect_to static_home_book_path
   end
 
+  def assign
+    @student = Student.all
+    render(new_assign)
+  end
+
   
   private
   def book_params
