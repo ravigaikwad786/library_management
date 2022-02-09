@@ -22,7 +22,7 @@
         <%if book.student_id?%>
           <%s=@student.find(book.student_id)%>
           <%=s.name%>
-          <%=book.due_date%>
+          <font color="red"><%=book.due_date%></font>
         <%else%>
           <%=link_to "Assign Book" , static_home_assign_path(id: book.id ) %> 
         <%end%> 
