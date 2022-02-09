@@ -20,7 +20,9 @@
       <td><%=book.description%></td>
       <td>
         <%if book.student_id?%>
-          <%=book.student_id%>
+          <%s=@student.find(book.student_id)%>
+          <%=s.name%>
+          <%=book.due_date%>
         <%else%>
           <%=link_to "Assign Book" , static_home_assign_path(id: book.id ) %> 
         <%end%> 

@@ -1,6 +1,7 @@
 class StaticHomeController < ApplicationController
   def book
     @books = Book.all
+    @student = Student.all
   end
 
  
